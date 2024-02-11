@@ -6,20 +6,25 @@ export default function AddExercise() {
   const exerciseName = useRef();
   const duration = useRef();
   const caloriesBurned = useRef();
+  // Set collection reference
   const ref = collection(firestore, "Exercises");
 
   const handleSave = async (e) => {
     e.preventDefault();
-    console.log(exerciseName.current.value);
+    // check to see if info is correctly stored
+    // console.log(exerciseName.current.value);
 
     let data = {
+      // structure data for database
       name: exerciseName.current.value,
       duration: duration.current.value,
       carlories: caloriesBurned.current.value,
     };
 
     try {
+      // Add data to database
       addDoc(ref, data);
+      // Clear the data
       exerciseName.current.value = "";
       duration.current.value = "";
       caloriesBurned.current.value = "";
@@ -29,6 +34,7 @@ export default function AddExercise() {
   };
   return (
     <div>
+      {/* Structure how the user input info */}
       <h2>Submit An Exercise</h2>
       <form onSubmit={handleSave}>
         <label>Exercise Name: </label>
