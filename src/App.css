@@ -1,0 +1,61 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  position: relative;
+}
+
+.appName {
+  position: fixed;
+  font-size: 40px;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 100;
+  color: aliceblue;
+}
+
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #0b028d;
+  z-index: 1;
+}
+
+.exercise-list {
+  padding: 20px;
+}
+
+.exercise-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of items */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 5 columns */
+  grid-gap: 20px; /* Spacing between cards */
+}
+
+.exercise-card {
+  border: 1px solid #150063;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block; /* Display as inline block */
+  margin-right: 1px; /* Spacing between cards */
+}
